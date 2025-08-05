@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,15 @@
                 <li><a href="#sobre-mi">Sobre mi</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#contactos-social">Contactos</a></li>
+                <li><a href="#contactos-social">Contactame</a></li>
+                <li class="header-proyectos-btn">
+                    <button id="header-proyectos-button" class="header-proyectos-btn">
+                        <span class="header-btn-text">Proyectos</span>
+                        <span class="header-btn-icon">
+                            <i class="fas fa-rocket"></i>
+                        </span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -43,7 +51,7 @@
                     <a href="https://www.facebook.com/share/18yZNvGwMt/" class="social-icon" aria-label="Facebook" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/jhon-elith-pay%C3%A1n-950777189?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" aria-label="LinkedIn" target="_blank">
+                    <a href="https://www.linkedin.com/in/jhon-elith-pay%C3%A1n-mina-950777189?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoBpeaos0Tl28AqyyGx7r%2Fw%3D%3D" class="social-icon" aria-label="LinkedIn" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="mailto:jepayan@unipacifico.edu.co" class="social-icon" aria-label="Email" target="_blank">
@@ -78,7 +86,36 @@
                 <li><strong>React:</strong> Desarrollo de interfaces de usuario modernas y componentes reutilizables.</li>
             </ul>
         </section>
+        <!-- Botón dinámico e interactivo para llevar a la página proyectos.html -->
+        <div class="proyectos-button-container">
+            <button id="proyectos-button" class="proyectos-btn">
+                <span class="btn-text">Ver Proyectos</span>
+                <span class="btn-icon">
+                    <i class="fas fa-rocket"></i>
+                </span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
+        <script>
+            document.getElementById('proyectos-button').addEventListener('click', function() {
+                // Efecto de click
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    window.location.href = 'proyectos.html';
+                }, 150);
+            });
 
+            // Script para el botón de proyectos del header
+            document.getElementById('header-proyectos-button').addEventListener('click', function() {
+                // Efecto de click
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    window.location.href = 'proyectos.html';
+                }, 150);
+            });
+        </script>
         <section id="experiencia">
             <h2>Experiencia</h2>
             <div class="experiencia-container">
@@ -154,7 +191,7 @@
         </div>
         <div class="social-icons" id="contactos-social">
             <a href="https://www.facebook.com/share/18yZNvGwMt/" class="social-icon-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/in/jhon-elith-pay%C3%A1n-950777189?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/jhon-elith-pay%C3%A1n-mina-950777189?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoBpeaos0Tl28AqyyGx7r%2Fw%3D%3D" class="social-icon-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:jepayan@unipacifico.edu.co" class="social-icon-link" target="_blank"><i class="fas fa-envelope"></i></a>
             <a href="https://www.instagram.com/jhon_elith/" class="social-icon-link" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>

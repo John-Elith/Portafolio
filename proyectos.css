@@ -1,0 +1,320 @@
+/* Proyectos Page Styles */
+.proyectos-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,1) 100%);
+    text-align: center;
+}
+
+.proyectos-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.proyectos-hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #00ff88, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.proyectos-hero-content p {
+    font-size: 1.3rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.proyectos-gallery {
+    padding: 60px 20px;
+    background: #000000;
+}
+
+.proyectos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.proyecto-card {
+    background: rgba(17, 17, 17, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(80px) saturate(180%);
+    -webkit-backdrop-filter: blur(80px) saturate(180%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.proyecto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00bfff, #00ff88, #007bff);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover::before {
+    transform: scaleX(1);
+}
+
+.proyecto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 191, 255, 0.2);
+    border-color: rgba(0, 191, 255, 0.3);
+}
+
+.proyecto-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 255, 136, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 2px solid rgba(0, 191, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 136, 0.3));
+    border-color: rgba(0, 191, 255, 0.5);
+}
+
+.proyecto-icon i {
+    font-size: 2rem;
+    color: #00bfff;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-icon i {
+    color: #00ff88;
+    transform: scale(1.1);
+}
+
+.proyecto-content h3 {
+    font-size: 1.4rem;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.proyecto-descripcion {
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.proyecto-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), rgba(0, 191, 255, 0.2));
+    color: #00bfff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 191, 255, 0.3));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+}
+
+/* Proyecto con imagen */
+.proyecto-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 191, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-image {
+    border-color: rgba(0, 191, 255, 0.4);
+    transform: scale(1.02);
+}
+
+.proyecto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Ícono pequeño card JAVA Swing alineado con etiquetas tech */
+.proyecto-icon-small {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 136, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 191, 255, 0.4);
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.proyecto-card:hover .proyecto-icon-small {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.4), rgba(0, 255, 136, 0.4));
+    border-color: rgba(0, 191, 255, 0.6);
+}
+
+.proyecto-icon-small i {
+    font-size: 1rem;
+    color: #00bfff;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-icon-small i {
+    color: #00ff88;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .proyectos-hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .proyectos-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .proyectos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .proyecto-card {
+        padding: 25px;
+    }
+
+    .proyecto-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .proyecto-icon i {
+        font-size: 1.8rem;
+    }
+
+    .proyecto-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .proyecto-image {
+        height: 180px;
+    }
+
+
+
+
+
+    .proyecto-icon-small {
+        width: 35px;
+        height: 35px;
+    }
+
+    .proyecto-icon-small i {
+        font-size: 0.9rem;
+    }
+
+    .proyectos-hero {
+        padding: 100px 15px 40px;
+    }
+
+    .proyectos-gallery {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyectos-hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .proyectos-hero-content p {
+        font-size: 1rem;
+    }
+
+    .proyecto-card {
+        padding: 20px;
+    }
+
+    .proyecto-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .proyecto-icon i {
+        font-size: 1.5rem;
+    }
+
+    .proyecto-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.9rem;
+    }
+
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .proyecto-image {
+        height: 160px;
+    }
+
+
+
+
+
+    .proyecto-icon-small {
+        width: 30px;
+        height: 30px;
+    }
+
+    .proyecto-icon-small i {
+        font-size: 0.8rem;
+    }
+}
